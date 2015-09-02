@@ -1,0 +1,15 @@
+{
+  "name": "fagdag-lyntale-uu-skjuling",
+  "version": "1.0.0",
+  "description": "Lyntale om UU-skjuling",
+  "main": "index.html",
+  "dependencies": {
+    "remark-bekk": "^0.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
