@@ -1,0 +1,11 @@
+form {
+  position: relative;
+}
+
+#search-hint {
+  position: absolute;
+  left: 100px;
+  top: 30px;
+  background-color: orange;
+  color: white
+}
