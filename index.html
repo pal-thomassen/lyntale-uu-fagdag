@@ -146,6 +146,72 @@ class: middle left
   <div role="tooltip" id="search-hint">Prøv å søk etter blå trikot</div>
 </form>
 
+---
+
+class: center middle
+
+# aria-expanded, aria-controls
+
+---
+
+class: left
+
+```html
+<button class="hamburger"><i></i></button>
+
+<ul role="menu" id="menu">
+  <li role="menuitem">Forside</li>
+  <li role="menuitem">Lorem Ipsum...</li>
+  <li role="menuitem">Om oss</li>
+</ul>
+```
+
+<button class="hamburger"><i></i></button>
+
+<ul role="menu" id="menu" class="menu">
+  <li role="menuitem">Forside</li>
+  <li role="menuitem">Lorem Ipsum...</li>
+  <li role="menuitem">Om oss</li>
+</ul>
+
+---
+
+class: left
+
+```html
+<button aria-controls="menu" aria-expanded="false" class="hamburger"><i></i></button>
+
+<ul role="menu" aria-hidden="true" id="menu">
+  <li role="menuitem">Forside</li>
+  <li role="menuitem">Lorem Ipsum...</li>
+  <li role="menuitem">Om oss</li>
+</ul>
+```
+
+<button aria-controls="menu" aria-expanded="false" class="hamburger"><i></i></button>
+
+<ul role="menu" aria-hidden="true" id="menu" class="menu">
+  <li role="menuitem">Forside</li>
+  <li role="menuitem">Lorem Ipsum...</li>
+  <li role="menuitem">Om oss</li>
+</ul>
+
+---
+
+class: middle left
+
+# Erfaringer
+
+* Husk og sett aria-attributter med JS.
+* Autogenerering av IDer er lurt.
+* Test med faktiske brukere
+* Bruk standard (semantiske) HTML-elementer istedenfor å lappe med Aria
+
+---
+
+class: middle center
+
+# Takk for meg!
 
     </textarea>
 

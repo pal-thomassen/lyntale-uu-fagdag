@@ -9,3 +9,56 @@ form {
   background-color: orange;
   color: white
 }
+
+.menu {
+  position: absolute;
+  top: 60%;
+  border: 2px solid white;
+  padding: 5px;
+}
+
+.hamburger {
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 30px;
+  height: 31px;
+  background: 0 0;
+  border: none;
+}
+
+.hamburger i, .hamburger i:before, .hamburger i:after {
+  position: absolute;
+  display: block;
+  height: 3px;
+  background: #fff;
+  -webkit-transition: -webkit-transform .2s ease-out;
+  transition: transform .2s ease-out;
+}
+
+.hamburger i {
+  top: 13px;
+  width: 27px;
+  border: none;
+}
+
+.hamburger i:after, .hamburger i:before {
+  top: -7px;
+  left: 0;
+  width: 100%;
+  content: '';
+}
+
+.hamburger i:after {
+ top: 7px;
+}
+
+.hamburger:hover i:before {
+  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+}
+
+.hamburger:hover i:after {
+  transform: translateY(2px);
+  -webkit-transform: translateY(2px);
+}
