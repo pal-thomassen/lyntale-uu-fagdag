@@ -6,6 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
     <link href="node_modules/remark-bekk/dist/bekk.css" type="text/css" rel="stylesheet">
+    <link href="css/main.css" type="text/css" rel="stylesheet">
   </head>
 
   <body class="bekk-black">
@@ -76,6 +77,76 @@ class: middle center
 class: middle center
 
 # The WAI forward
+
+---
+
+class: middle center
+
+# Aria-hidden=true|false
+
+* Koble sammen med display: none.
+* Kan brukes alene når man eksplisitt vil skjule ting kun fra skjermlesere.
+* blank font fra Adobe for å skjule fra visuelle brukere.
+
+---
+
+class: middle left
+
+  ![Word art bilde](img/word_art.png)
+
+  ```html
+  <h2>
+    <img src="img/titleAsFancyImg.png" alt="" />
+    <span class="visually-hidden">Title as Text</span>
+  </h2>
+  ```
+
+---
+
+class: middle center
+
+# Lag kobling mellom ulike elementer
+
+---
+
+class: middle left
+
+  ## Form med validering
+
+  ```html
+<form action="#">
+  <label for="search">Søk etter superhelter</label>
+  <input id="search" type="text" />
+  <div id="search-hint">Prøv å søk etter blå trikot</div>
+</form>
+  ```
+
+  <form action="#">
+    <label for="search">Søk etter superhelter</label>
+    <input id="search" type="text" />
+    <div id="search-hint">Prøv å søk etter blå trikot</div>
+  </form>
+---
+
+class: middle left
+
+## Bedre løsning
+
+```html
+<form action="#">
+  <label for="search">Søk etter superhelter</label>
+  <input id="search" type="text" aria-describedby="search-hint"/>
+  <div role="tooltip" id="search-hint">Prøv å søk etter blå trikot</div>
+</form>
+```
+
+<form action="#">
+  <label for="search">Søk etter superhelter</label>
+  <input id="search" type="text" aria-describedby="search-hint"/>
+  <div role="tooltip" id="search-hint">Prøv å søk etter blå trikot</div>
+</form>
+
+
     </textarea>
 
     <script src="node_modules/remark-bekk/vendor/remark-0.11.0.min.js" type="text/javascript"></script>
